@@ -1,0 +1,8 @@
+{
+  "indicators": {
+    "education": "Education",
+    "intrest": "Intrests",
+    "experience": "Experience",
+    "skills": "Skills"
+  }
+}

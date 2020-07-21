@@ -1,0 +1,20 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: "IBMPlexSans-Light";
+  src: url(./IBMPlexSans-Light.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexSans";
+  src: url(./IBMPlexSans.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexSans-Medium";
+  src: url(./IBMPlexSans-Medium.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexSans-Bold";
+  src: url(./IBMPlexSans-Bold.otf) format("truetype");
+}

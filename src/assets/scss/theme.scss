@@ -1,0 +1,55 @@
+:root {
+  --light-bg: #eeedfd;
+  --light-bg-primary-text-color: #000000;
+  --light-bg-secondary-text-color: #4f4f4f;
+
+  --dark-bg: #100e3f;
+  --dark-bg-primary-text-color: #ffffff;
+  --dark-bg-secondary-text-color: #d2d0fa;
+
+  --positive-color: #44ce1d;
+  --negative: #d0021b;
+  --neutral: #ffbc00;
+  // --background: #edf1f2;
+  // --default-white: #ffffff;
+  // --black-100: #000000;
+  // --black-80: #333333;
+  // --black-60: #666666;
+  // --black-40: #999999;
+  // --black-20: #cccccc;
+  // --black-10: #e6e6e6;
+  // --black-5: #f2f2f2;
+}
+
+.light_theme {
+  .bg {
+    background-color: var(--light-bg);
+  }
+  .primary_text {
+    color: var(--light-bg-primary-text-color);
+  }
+  .secondary_text {
+    color: var(--light-bg-secondary-text-color);
+  }
+}
+
+.dark_theme {
+  .bg {
+    background-color: var(--dark-bg);
+  }
+  .primary_text {
+    color: var(--dark-bg-primary-text-color);
+  }
+  .secondary_text {
+    color: var(--dark-bg-secondary-text-color);
+  }
+}
+
+.primary_text {
+  font-family: IBMPlexSans;
+  font-size: 60px;
+}
+.secondary_text {
+  font-family: IBMPlexSans-Light;
+  font-size: 24px;
+}
