@@ -1,11 +1,11 @@
 <template>
-  <div class="experience--1">
+  <div class="experience--3">
     <div class="content">
-      <div class="primary_text">Agile Labs <sup>(2016-2019)</sup></div>
+      <div class="primary_text">ZETA(DirectI) <sup>(2019 - *)</sup></div>
       <div class="secondary_text">
-        With the passion of FrontEnd Development, the universe landed me on my first job as
+        After fulfilling my duties in the past company, I moved here as a
         <br />
-        <i> web designer/developer. </i>
+        <i> frontEnd Developer, SD II </i>
       </div>
     </div>
     <div class="svg_container">
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import SkillsIllustration from '../../assets/SVGs/illustrations/experience/exp-1.svg';
+import SkillsIllustration from '../../assets/SVGs/illustrations/experience/zeta.svg';
 export default {
   data() {
     return {
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.experience--1 {
+.experience--3 {
   text-align: center;
   display: flex;
   flex-direction: column;

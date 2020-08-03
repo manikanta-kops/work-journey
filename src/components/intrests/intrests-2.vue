@@ -54,6 +54,23 @@ export default {
     svg {
       width: 100%;
       height: 100%;
+      /deep/ {
+        #right_hand {
+          transform-origin: left;
+          animation: clean 2s ease-in-out infinite;
+        }
+      }
+    }
+  }
+  @keyframes clean {
+    0% {
+      transform: rotateX(-4deg) rotateY(-5deg);
+    }
+    50% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(-4deg) rotateY(-5deg);
     }
   }
 }

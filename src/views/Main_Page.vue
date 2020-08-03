@@ -3,12 +3,27 @@
     <div class="Content">
       <div class="secondary_text">Hi I'M</div>
       <div class="primary_text">ManiKanta</div>
-      <div class="secondary_text">A front end developer who loves to design + code</div>
+      <div class="secondary_text">
+        I believe that human potential is more & always spends time in self-development. <br />
+        Rest you can find by navigating,
+      </div>
+      <div class="directions">
+        <keyboardIcon></keyboardIcon>
+        <pointerIcon></pointerIcon>
+        <swipeIcon></swipeIcon>
+      </div>
+      <div class="secondary_text">
+        You can find me @
+      </div>
       <div class="social_media">
-        <!-- <a href=""><MediumIcon></MediumIcon></a> -->
-        <a href=""><FaceBookIcon></FaceBookIcon></a>
-        <a href=""><TwitterIcon></TwitterIcon></a>
-        <a href=""><InstagramIcon></InstagramIcon></a>
+        <a href="https://medium.com/@manikanta.koppala7" target="_blank"
+          ><MediumIcon></MediumIcon
+        ></a>
+        <a href="https://www.linkedin.com/in/manikanta-koppala-b5b346105/" target="_blank"
+          ><linkdinIcon></linkdinIcon
+        ></a>
+        <a href="https://twitter.com/mani_koppala" target="_blank"><TwitterIcon></TwitterIcon></a>
+        <a href="https://github.com/manikanta-kops" target="_blank"><githubIcon></githubIcon></a>
       </div>
     </div>
     <!-- <transition
@@ -25,10 +40,16 @@
 
 <script>
 import MainPageIllustration from '../assets/SVGs/illustrations/Home_Image.svg';
-import InstagramIcon from '../assets/SVGs/icons/social/Instagram.svg';
-import FaceBookIcon from '../assets/SVGs/icons/social/Facebook.svg';
-import TwitterIcon from '../assets/SVGs/icons/social/Twitter.svg';
-import MediumIcon from '../assets/SVGs/icons/social/Medium.svg';
+
+import githubIcon from '../assets/SVGs/icons/social/github.svg';
+import linkdinIcon from '../assets/SVGs/icons/social/linkdin.svg';
+import TwitterIcon from '../assets/SVGs/icons/social/twitter2.svg';
+import MediumIcon from '../assets/SVGs/icons/social/medium.svg';
+
+import keyboardIcon from '../assets/SVGs/icons/keyboard.svg';
+import pointerIcon from '../assets/SVGs/icons/pointer.svg';
+import swipeIcon from '../assets/SVGs/icons/swipe.svg';
+
 export default {
   data() {
     return {
@@ -37,10 +58,13 @@ export default {
   },
   components: {
     MainPageIllustration,
-    FaceBookIcon,
-    MediumIcon,
+    githubIcon,
+    linkdinIcon,
     TwitterIcon,
-    InstagramIcon,
+    MediumIcon,
+    keyboardIcon,
+    pointerIcon,
+    swipeIcon,
   },
   methods: {
     beforeLeave() {
@@ -61,8 +85,18 @@ export default {
   .Content {
     // align-self: center;
     width: 100%;
+    padding: 50px;
     .primary_text {
       margin: 13px 0;
+    }
+    .directions {
+      margin: 20px 0;
+      svg {
+        margin-right: 20px;
+      }
+    }
+    .secondary_text {
+      max-width: 40%;
     }
     .social_media {
       a {
@@ -82,6 +116,117 @@ export default {
     svg {
       width: 100%;
       height: 100%;
+      /deep/ {
+        #Bird {
+          animation: fly1 15s linear infinite;
+        }
+        #Bird_2 {
+          animation: fly2 15s linear infinite;
+        }
+        #Bird_3 {
+          animation: fly3 15s linear infinite;
+        }
+        #tree {
+          transform-origin: bottom;
+          transform-box: fill-box;
+          animation: swing 15s linear infinite;
+        }
+      }
+    }
+  }
+  @keyframes fly1 {
+    0% {
+      opacity: 0.3;
+      transform: translateX(0px);
+    }
+
+    30% {
+      transform: translateX(-324px);
+    }
+
+    35% {
+      opacity: 0;
+      transform: translateX(655px);
+    }
+    40% {
+      opacity: 0.3;
+    }
+    80% {
+      opacity: 0.3;
+      transform: translateX(255px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes fly2 {
+    0% {
+      opacity: 0.3;
+      transform: translateX(0px);
+    }
+
+    60% {
+      transform: translateX(-806px);
+    }
+
+    65% {
+      opacity: 0;
+      transform: translateX(182px);
+    }
+    70% {
+      opacity: 0.3;
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes fly3 {
+    0% {
+      opacity: 0.3;
+      transform: translateX(0px);
+    }
+
+    60% {
+      transform: translateX(-506px);
+    }
+
+    65% {
+      opacity: 0;
+      transform: translateX(475px);
+    }
+    70% {
+      opacity: 0.3;
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes swing {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    25% {
+      transform: rotate(-4deg);
+    }
+    35% {
+      transform: rotate(-8deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: rotate(-8deg);
+    }
+    90% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
     }
   }
 }

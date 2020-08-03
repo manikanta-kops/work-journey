@@ -60,6 +60,23 @@ export default {
     svg {
       width: 100%;
       height: 100%;
+      /deep/ {
+        #circle {
+          transform-origin: center;
+          animation: rotateMe 7s cubic-bezier(0.98, 0.26, 0.02, 1.46) infinite;
+        }
+      }
+    }
+  }
+  @keyframes rotateMe {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
     }
   }
 }

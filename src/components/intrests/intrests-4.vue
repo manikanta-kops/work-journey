@@ -54,6 +54,42 @@ export default {
     svg {
       width: 100%;
       height: 100%;
+      /deep/ {
+        #upper-body {
+          transform-origin: right bottom;
+          // transform: rotate(-10deg);
+          animation: pushup 7s cubic-bezier(0.98, 0.26, 0.02, 1.46) infinite;
+        }
+        #Vector_89,
+        #Vector_24,
+        #Vector_23 {
+          animation: pushupHand 7s cubic-bezier(0.98, 0.26, 0.02, 1.46) infinite;
+          transform-box: fill-box;
+          transform-origin: bottom;
+        }
+      }
+    }
+  }
+  @keyframes pushup {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes pushupHand {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(0.5) rotate(-21deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
     }
   }
 }

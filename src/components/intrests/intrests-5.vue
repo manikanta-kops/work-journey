@@ -5,8 +5,8 @@
         Writing
       </div>
       <div class="secondary_text">
-        When some time is there (especially my mornings), I'll write mostly write about my life
-        lessons things I learned. Writing gives me more clarity and vision of my life
+        When some time is there (especially my mornings), I'll write mostly about my life lessons
+        and things I learned. Writing gives me more clarity and vision of my life
       </div>
       <a target="_blank" class="anchor_tag" href="https://medium.com/@manikanta.koppala7"
         >All my articles are here.</a

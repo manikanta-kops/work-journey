@@ -105,9 +105,22 @@ export default {
       } else if (activeModule === 'education' || activeModule === 'experience') {
         //should not navigate up/down
         frameNumber = this.$route.params.frame || 0;
-        frameNumber = parseInt(frameNumber) + 1;
         if (direction === 'TOP' || direction === 'DOWN') {
           return false;
+        }
+
+        if (direction === 'LEFT') {
+          if (activeModule === 'education') {
+            frameNumber = parseInt(frameNumber) + 1;
+          } else {
+            frameNumber = parseInt(frameNumber) - 1;
+          }
+        } else if (direction === 'RIGHT') {
+          if (activeModule === 'experience') {
+            frameNumber = parseInt(frameNumber) + 1;
+          } else {
+            frameNumber = parseInt(frameNumber) - 1;
+          }
         }
       } else if (activeModule === 'intrests' || activeModule === 'skills') {
         //should not navigate LEFT/RIGHT
@@ -160,7 +173,6 @@ export default {
     subscribeEvent(KEYWORDS.GO_HOME, this.goHome);
     window.addEventListener('keyup', (ev) => {
       let { keyCode } = ev;
-      console.log(keyCode);
       if (keyCode === 65 || keyCode === 37) {
         //a or left arrow
         this.changePage('LEFT');

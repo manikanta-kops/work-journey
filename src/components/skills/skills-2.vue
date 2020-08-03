@@ -56,6 +56,7 @@ export default {
   justify-content: space-between;
   align-items: flex-end;
   .top_content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

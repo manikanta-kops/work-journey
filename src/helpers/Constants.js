@@ -15,10 +15,10 @@ export const ROUTER_CONFIG = {
     frames: 5,
   },
   education: {
-    frames: 5,
+    frames: 1,
   },
   experience: {
-    frames: 5,
+    frames: 4,
   },
   intrests: {
     frames: 6,
