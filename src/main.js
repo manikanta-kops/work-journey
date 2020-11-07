@@ -4,7 +4,8 @@ import router from './router';
 import store from './store';
 import i18n from './i18n';
 import { registerApp } from './helpers/Observer';
-
+import VTooltip from 'v-tooltip';
+Vue.use(VTooltip);
 import './assets/scss/main.scss';
 
 Vue.config.productionTip = false;

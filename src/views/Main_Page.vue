@@ -5,12 +5,32 @@
       <div class="primary_text">ManiKanta</div>
       <div class="secondary_text">
         I believe that human potential is more & always spends time in self-development. <br />
-        Rest you can find by navigating,
+      </div>
+      <div class="secondary_text ternary_text">
+        Rest you can find by navigating
       </div>
       <div class="directions">
-        <keyboardIcon></keyboardIcon>
-        <pointerIcon></pointerIcon>
-        <swipeIcon></swipeIcon>
+        <button
+          v-tooltip="{
+            content: 'Navigate using arrow keys or (wasd).<br /> H -> home',
+          }"
+        >
+          <keyboardIcon></keyboardIcon>
+        </button>
+        <button
+          v-tooltip="{
+            content: 'Navigate by clicking on four sides of the screen',
+          }"
+        >
+          <pointerIcon></pointerIcon>
+        </button>
+        <button
+          v-tooltip="{
+            content: 'Navigate by dragging in any direction',
+          }"
+        >
+          <swipeIcon></swipeIcon>
+        </button>
       </div>
       <div class="secondary_text">
         You can find me @
@@ -90,6 +110,12 @@ export default {
       margin: 13px 0;
     }
     .directions {
+      button {
+        background: none;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+      }
       margin: 20px 0;
       svg {
         margin-right: 20px;
@@ -97,6 +123,11 @@ export default {
     }
     .secondary_text {
       max-width: 40%;
+    }
+    .ternary_text {
+      font-family: IBMPlexSans-Light;
+      margin-top: 10px;
+      font-size: 14px;
     }
     .social_media {
       a {

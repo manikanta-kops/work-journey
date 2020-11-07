@@ -1,6 +1,24 @@
 <template>
   <div id="app" class="light_theme">
     <div class="main_bg bg">
+      <div class="help_strip">
+        <button
+          v-if="activeModule !== 'home'"
+          @click="goHome()"
+          v-tooltip.left="{
+            content: 'Home',
+          }"
+        >
+          <HomeIcon />
+        </button>
+        <button
+          v-tooltip.left="{
+            content: 'Download Resume',
+          }"
+        >
+          <DownloadIcon />
+        </button>
+      </div>
       <div class="indicators">
         <div class="left_part">
           <div @click="changePage('LEFT')" class="arrow_indicator">
@@ -71,6 +89,9 @@
 <script>
 // SVG's
 import Arrow from './components/helper_components/Arrow';
+import HomeIcon from './assets/SVGs/icons/home.svg';
+import DownloadIcon from './assets/SVGs/icons/download.svg';
+
 import { ROUTER_CONFIG, KEYWORDS } from './helpers/Constants';
 import { subscribeEvent } from './helpers/Observer';
 
@@ -78,10 +99,16 @@ export default {
   data() {
     return {
       activeModule: 'home',
+      touchstartX: 0,
+      touchstartY: 0,
+      touchendX: 0,
+      touchendY: 0,
     };
   },
   components: {
     Arrow,
+    HomeIcon,
+    DownloadIcon,
   },
   methods: {
     changePage(direction) {
@@ -168,9 +195,56 @@ export default {
         name: 'home',
       });
     },
+    handleGesture() {
+      let touchstartX = this.touchstartX;
+      let touchendX = this.touchendX;
+
+      let touchstartY = this.touchstartY;
+      let touchendY = this.touchendY;
+
+      let xDiff = Math.abs(touchendX - touchstartX);
+      let yDiff = Math.abs(touchendY - touchstartY);
+
+      if (xDiff > yDiff) {
+        if (touchendX < touchstartX) {
+          // console.log('Swiped left');
+          this.changePage('RIGHT');
+        } else if (touchendX > touchstartX) {
+          // console.log('Swiped right');
+          this.changePage('LEFT');
+        }
+      } else {
+        if (touchendY < touchstartY) {
+          // console.log('Swiped up');
+          this.changePage('DOWN');
+        } else if (touchendY > touchstartY) {
+          // console.log('Swiped down');
+          this.changePage('TOP');
+        }
+      }
+    },
   },
   created() {
     subscribeEvent(KEYWORDS.GO_HOME, this.goHome);
+    let self = this;
+    document.addEventListener(
+      'touchstart',
+      function(event) {
+        self.touchstartX = event.changedTouches[0].screenX;
+        self.touchstartY = event.changedTouches[0].screenY;
+      },
+      false,
+    );
+
+    document.addEventListener(
+      'touchend',
+      function(event) {
+        self.touchendX = event.changedTouches[0].screenX;
+        self.touchendY = event.changedTouches[0].screenY;
+        self.handleGesture();
+      },
+      false,
+    );
     window.addEventListener('keyup', (ev) => {
       let { keyCode } = ev;
       if (keyCode === 65 || keyCode === 37) {
@@ -204,6 +278,16 @@ export default {
 body {
   overflow: hidden;
 }
+.tooltip {
+  background: #dadada;
+  padding: 5px 10px;
+  box-shadow: 0px 0px 4px #a7a7a7;
+  line-height: 20px;
+  border-radius: 10px;
+  z-index: 11;
+  font-size: 14px;
+  font-family: IBMPlexSans-Light;
+}
 </style>
 
 <style lang="scss" scoped>
@@ -211,6 +295,22 @@ body {
   .main_bg {
     height: 100vh;
     width: 100vw;
+    .help_strip {
+      position: absolute;
+      right: 10px;
+      z-index: 11;
+      button {
+        background: none;
+        border: none;
+        outline: 0;
+        padding: 0;
+        cursor: pointer;
+      }
+      svg {
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
     .indicators {
       display: flex;
       position: absolute;
