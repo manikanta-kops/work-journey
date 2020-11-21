@@ -15,6 +15,7 @@
           v-tooltip.left="{
             content: 'Download Resume',
           }"
+          @click="downLoadResume"
         >
           <DownloadIcon />
         </button>
@@ -188,6 +189,10 @@ export default {
           params: { frame: frameNumber },
         });
       }
+    },
+    downLoadResume() {
+      let url = 'https://mani-koppala.web.app/ManikoppalaResume.pdf';
+      window.open(url, '_blank');
     },
     goHome() {
       this.activeModule = 'home';
