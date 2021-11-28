@@ -3,6 +3,9 @@
     <div class="Content">
       <div class="secondary_text">Hi I'M</div>
       <div class="primary_text">ManiKanta</div>
+      <div class="middle_text">
+        <frontEndDeveloperImage />
+      </div>
       <div class="secondary_text">
         I believe that human potential is more & always spends time in self-development. <br />
       </div>
@@ -73,6 +76,8 @@ import keyboardIcon from '../assets/SVGs/icons/keyboard.svg';
 import pointerIcon from '../assets/SVGs/icons/pointer.svg';
 import swipeIcon from '../assets/SVGs/icons/swipe.svg';
 
+import frontEndDeveloperImage from '../assets/SVGs/frontEndDeveloper.svg';
+
 import BubblyButton from '../components/common/bubbly-button.vue';
 
 export default {
@@ -91,6 +96,7 @@ export default {
     pointerIcon,
     swipeIcon,
     BubblyButton,
+    frontEndDeveloperImage,
   },
   methods: {
     beforeLeave() {},
@@ -114,6 +120,16 @@ export default {
     // align-self: center;
     width: 100%;
     padding: 50px;
+    .middle_text {
+      margin-bottom: 10px;
+      svg {
+        max-width: 300px;
+        path {
+          fill: #958fff;
+          stroke: #958fff;
+        }
+      }
+    }
     .primary_text {
       margin: 13px 0;
     }
