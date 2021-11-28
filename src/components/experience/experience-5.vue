@@ -1,11 +1,11 @@
 <template>
   <div class="experience--3">
     <div class="content">
-      <div class="primary_text">ZETA(DirectI) <sup>(2018 DEC - 2021JAN)</sup></div>
+      <div class="primary_text">Livspace <sup>(2021 JAN - *)</sup></div>
       <div class="secondary_text">
-        After fulfilling my duties in the past company, I moved here as a
+        Here i joined as a
         <br />
-        <i> frontEnd Developer, SD II </i>
+        <i> SDE III </i>
       </div>
     </div>
     <div class="svg_container">
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import SkillsIllustration from '../../assets/SVGs/illustrations/experience/zeta.svg';
+import SkillsIllustration from '../../assets/SVGs/illustrations/experience/livspace.svg';
 export default {
   data() {
     return {

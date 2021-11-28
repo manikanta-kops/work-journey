@@ -2,17 +2,17 @@
   <div class="experience--2">
     <div class="content">
       <div class="secondary_text">
-        In ZETA I met incredibly talented people where I am fulfilling my duties as,
+        In LivSpace i am given a huge responsilibities and challanges.
       </div>
       <div class="list_items">
         <ul class="secondary_text">
+          <li>Promoted to lead the team of 7 members.</li>
+          <li>Responsible for driving the team in terms of tech and product delivery.</li>
+          <li>Worked on building Mirco Front-end Applications</li>
           <li>
-            Mentoring and guiding my co-workers (friends)
+            Initiated the process for unit testing &amp; stream lined in our application and build
+            process
           </li>
-          <li>Responsible for front end progress in my team.</li>
-          <li>Manage to distribute the work every day.</li>
-          <li>Initiated &amp; Developed <a href="https://medium.com/js-dojo/vue-plugin-based-development-b121ffb4921e" target="_blank">VUE plugin-based system</a> to solve our multi-country serving.</li>
-          <li>Won <b>outstanding performer award</b> for two consecutive years</li>
         </ul>
       </div>
     </div>
@@ -54,7 +54,7 @@ export default {
     text-align: left;
     .secondary_text {
       margin-top: 20px;
-      b{
+      b {
         font-weight: bold;
       }
     }

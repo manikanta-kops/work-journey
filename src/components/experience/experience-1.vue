@@ -1,7 +1,7 @@
 <template>
   <div class="experience--1">
     <div class="content">
-      <div class="primary_text">Agile Labs <sup>(2016-2019)</sup></div>
+      <div class="primary_text">Agile Labs <sup>(2016 APR - 2018 DEC)</sup></div>
       <div class="secondary_text">
         With the passion of FrontEnd Development, the universe landed me on my first job as
         <br />

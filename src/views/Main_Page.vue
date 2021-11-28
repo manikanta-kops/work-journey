@@ -45,6 +45,9 @@
         <a href="https://twitter.com/mani_koppala" target="_blank"><TwitterIcon></TwitterIcon></a>
         <a href="https://github.com/manikanta-kops" target="_blank"><githubIcon></githubIcon></a>
       </div>
+      <div class="download_resume">
+        <BubblyButton @onClick="onResumeDownload" title="Download Resume" />
+      </div>
     </div>
     <!-- <transition
       name="main_svg_container"
@@ -64,11 +67,13 @@ import MainPageIllustration from '../assets/SVGs/illustrations/Home_Image.svg';
 import githubIcon from '../assets/SVGs/icons/social/github.svg';
 import linkdinIcon from '../assets/SVGs/icons/social/linkdin.svg';
 import TwitterIcon from '../assets/SVGs/icons/social/twitter2.svg';
-import MediumIcon from '../assets/SVGs/icons/social/medium.svg';
+import MediumIcon from '../assets/SVGs/icons/social/Medium.svg';
 
 import keyboardIcon from '../assets/SVGs/icons/keyboard.svg';
 import pointerIcon from '../assets/SVGs/icons/pointer.svg';
 import swipeIcon from '../assets/SVGs/icons/swipe.svg';
+
+import BubblyButton from '../components/common/bubbly-button.vue';
 
 export default {
   data() {
@@ -85,10 +90,13 @@ export default {
     keyboardIcon,
     pointerIcon,
     swipeIcon,
+    BubblyButton,
   },
   methods: {
-    beforeLeave() {
-      debugger;
+    beforeLeave() {},
+    onResumeDownload() {
+      let url = 'https://mani-koppala.web.app/ManikoppalaResume.pdf';
+      window.open(url, '_blank');
     },
   },
   mounted() {

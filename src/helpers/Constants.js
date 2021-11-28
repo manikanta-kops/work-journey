@@ -18,7 +18,7 @@ export const ROUTER_CONFIG = {
     frames: 1,
   },
   experience: {
-    frames: 4,
+    frames: 6,
   },
   intrests: {
     frames: 6,

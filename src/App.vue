@@ -1,6 +1,9 @@
 <template>
   <div id="app" class="light_theme">
     <div class="main_bg bg">
+      <div class="mkSign" @click="goHome()">
+        <MkSign />
+      </div>
       <div class="help_strip">
         <button
           v-if="activeModule !== 'home'"
@@ -92,6 +95,7 @@
 import Arrow from './components/helper_components/Arrow';
 import HomeIcon from './assets/SVGs/icons/home.svg';
 import DownloadIcon from './assets/SVGs/icons/download.svg';
+import MkSign from './assets/SVGs/mk.svg';
 
 import { ROUTER_CONFIG, KEYWORDS } from './helpers/Constants';
 import { subscribeEvent } from './helpers/Observer';
@@ -110,6 +114,7 @@ export default {
     Arrow,
     HomeIcon,
     DownloadIcon,
+    MkSign,
   },
   methods: {
     changePage(direction) {
@@ -229,6 +234,16 @@ export default {
       }
     },
   },
+  mounted() {
+    let hash = window.location.hash || '';
+    hash = hash.split('/');
+    if (hash && hash.length) {
+      let module = hash[1];
+      if (module) {
+        this.activeModule = module;
+      }
+    }
+  },
   created() {
     subscribeEvent(KEYWORDS.GO_HOME, this.goHome);
     let self = this;
@@ -300,6 +315,14 @@ body {
   .main_bg {
     height: 100vh;
     width: 100vw;
+    .mkSign {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 80px;
+      cursor: pointer;
+      z-index: 99999999;
+    }
     .help_strip {
       position: absolute;
       right: 10px;
