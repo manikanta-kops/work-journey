@@ -196,7 +196,7 @@ export default {
       }
     },
     downLoadResume() {
-      let url = 'https://mani-koppala.web.app/ManikoppalaResume.pdf';
+      let url = 'https://mani-koppala.web.app/Manikanta-koppala.min.pdf';
       window.open(url, '_blank');
     },
     goHome() {

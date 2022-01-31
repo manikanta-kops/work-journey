@@ -45,7 +45,7 @@
         <a href="https://www.linkedin.com/in/manikanta-koppala-b5b346105/" target="_blank"
           ><linkdinIcon></linkdinIcon
         ></a>
-        <a href="https://twitter.com/mani_koppala" target="_blank"><TwitterIcon></TwitterIcon></a>
+        <!-- <a href="https://twitter.com/mani_koppala" target="_blank"><TwitterIcon></TwitterIcon></a> -->
         <a href="https://github.com/manikanta-kops" target="_blank"><githubIcon></githubIcon></a>
       </div>
       <div class="download_resume">
@@ -101,7 +101,7 @@ export default {
   methods: {
     beforeLeave() {},
     onResumeDownload() {
-      let url = 'https://mani-koppala.web.app/ManikoppalaResume.pdf';
+      let url = 'https://mani-koppala.web.app/Manikanta-koppala.min.pdf';
       window.open(url, '_blank');
     },
   },
